@@ -1,16 +1,23 @@
 var express = require("express"),
     app = express(),
     bodyParser = require("body-parser"),
-    mongoose = require("mongoose"),
+    mongoose = require("mongoose");
+
+
+var app =express();
     
 
 
 
 // App Config
-mongoose.connect("mongodb://localhost:27017/blogApp",
+mongoose.connect("mongodb://localhost/blogApp",
  {
     useNewUrlParser: true,
     useUnifiedTopology : true
+},(err)=>{
+    if(!err){
+        console.log('database connected');
+    }
 })
 app.set("view engine", "ejs")
 app.use('/public',express.static(__dirname + "/public"))
