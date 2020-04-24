@@ -1,8 +1,7 @@
-
-*{
-    background-color: blueviolet;
+i.code {
+    font-size: 2em;
 }
 
-i.icon{ 
-    font-size: 2em;
+.container.main {
+    margin-top: 12em;
 }
